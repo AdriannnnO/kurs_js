@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="huj">
+    <button onclick="exe()">DODAJ</button>
+    <ul id="list">
+        
+    </ul>
+</body>
+</html>
+
+<script>
+    
+t=[]
+function exe(){
+    let vale=document.getElementById("huj").value
+    console.log(document.getElementById("huj").value)
+
+        var ul = document.getElementById("list");
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(vale));
+        ul.appendChild(li);
+
+}
+
+</script>

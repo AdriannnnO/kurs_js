@@ -2,3 +2,6 @@ let is a variable that can be later changed
 const wont be changed
 ciecia - substring() // slice()
 .includes("x")
+
+null means it holds no value
+undefined as well but nonintenional

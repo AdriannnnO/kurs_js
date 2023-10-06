@@ -24,16 +24,10 @@
 // greetings(a)
 
 
-let a = 242
+// let a = 242
 
-let b = 38
+// let b = 38
 
-let cowieksze = (a,b) => {
-    if (a>b){
-        return a}
-        else{
-            return b
-    }
-}
+// let pizda = (a,b) => a+b
 
-console.log(cowieksze(a,b))
+// console.log(pizda(a,b))

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol>
+        <li>SIEMA</li>
+        <li>SIEMANKO</li>
+        <li>DJJDJDJDJDJ</li>
+    </ol>
+    <button onclick="huj()">jd</button>
+
+    <h3>lubie duze <h1>cyce</h1></h3>
+
+</body>
+<script>
+// function huj(){
+//     dymy = document.querySelector("ol");
+//     dymy.forEach((element,index) => {
+//         console.log(`${index+1}. ${element.innerText}`);
+//     });
+//     dymy.innerHTML += "<li>pizdziec jeban</li>";
+// }
+function huj(){
+    dymy = document.querySelector("h3");
+    dymy.innerHTML+="<h1>cyce</h1>";
+}
+
+var lista = document.querySelector("ol");
+let lista_array = Array.from(lista.children);
+lista_array.forEach((element,index) => {
+    console.log(element)
+    element.classList.add("grocery_element")
+    if (index==2){
+        element.textContent = "gawarisz pa ruski"
+    }
+});
+</script>
+</html>
+
+<style>
+    h3,h1{
+        display: inline;
+    }
+</style>

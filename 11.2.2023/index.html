@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form>
+            <input type="text" id="username"></br>
+            <p id="username_tekst"></p>
+            <textarea placeholder="jd" id="tekst"></textarea></br>
+            <input type="submit">
+        </form>
+    </div>
+</body>
+</html>
+
+<style>
+    div{
+        height: 100vh;
+    }
+</style>
+
+<script>
+    const userPattern = /^[a-z0-9]{5,10}$/;
+    const tekstPattern = /^.{20,50}$/;
+
+    const form = document.querySelector('form');
+        
+    const userResult = userPattern.test(form.username.value);
+    const tekstCheck = tekstPattern.test(form.tekst.value);
+
+        var jd = document.getElementById("username_tekst")
+
+        form.username.addEventListener("keyup",(event) => {
+            const userResult = userPattern.test(form.username.value);
+            if (userResult){
+                console.log("przesalno pomyslnie");
+
+                form.username.setAttribute("class", "input-accept");
+                jd.textContent = "git gut";
+            }else{
+                console.log("nie przeslano")
+                form.username.setAttribute("class", "input-decline")
+                jd.textContent = "bad"
+
+            
+        }
+        })
+
+
+
+
+</script>
+
+
+<style>
+    .input-accept{
+        border: 2px solid lightgreen;
+        outline: 2px solid lightgreen;
+    }
+    .input-decline{
+        border: 2px solid red;
+        outline: 2px solid red;
+    }
+</style>
